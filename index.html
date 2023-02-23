@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Staccato</title>
-</head> 
-<body>
-    <div class="navbar";>
-        <div class="logo";>
-            <img src="images/STCL_copy.svg">
-        </div>
-    </div>
-    <div class="p1";>
-        <div class="square";>
-            <p>WELCOME TO STACCATO</p>
-            <div class="btns">
-                <script>
-                    let beg = "beginner";
-                    let intr = "intermediate";
-                    let adv = "advanced";
-                </script>
-                <button onclick="functionToExecute(beg)">BEGINNER</button>
-                <button onclick="functionToExecute(intr)">INTERMEDIATE</button>
-                <button onclick="functionToExecute(adv)">ADVANCED</button>
-                <script src="home.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Staccato</title>
+    </head> 
+    <body>
+        <div class="navbar";>
+            <div class="logo";>
+                <a href="file:///Users/samuelgoncalves/Documents/PROJECTS/Staccato-Learn/index.html">
+                    <img src="images/STCL_copy.svg">
+                </a>
             </div>
         </div>
-    </div>
-    <div class="p2";>
-        <div class="infocol";>
-            <!--Staccato-->
+        <div class="p1";>
+            <div class="square";>
+                <p>WELCOME TO STACCATO</p>
+                <div class="btns">
+                    <button onclick="pageLinks(this)", 
+                        value="file:///Users/samuelgoncalves/Documents/PROJECTS/Staccato-Learn/beginner.html">
+                            BEGINNER</button>
+                    <button onclick="pageLinks(this)", 
+                        value="file:///Users/samuelgoncalves/Documents/PROJECTS/Staccato-Learn/intermediate.html">
+                            INTERMEDIATE</button>
+                    <button onclick="pageLinks(this)", 
+                        value="file:///Users/samuelgoncalves/Documents/PROJECTS/Staccato-Learn/advanced.html">
+                        ADVANCED</button>
+                    <script src="home.js"></script>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+        <div class="p2";>
+            <div class="infocol";>
+                <!--Staccato-->
+            </div>
+        </div>
+    </body>
 </html>
