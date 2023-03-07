@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 html {
   height: 100%;
 }
@@ -5,7 +8,9 @@ html {
 body{
   background-image: linear-gradient(to right bottom,
     #21FAE1, #21C8E5, #480B93, #2F0056, #DC28FA);
-  font-family: Trebuchet MS;
+  /*font-family: Trebuchet MS;*/
+  font-family: Montserrat;
+  font-weight: 700;
   font-size: 50px;
   backdrop-filter: blur(80px);
 
@@ -17,14 +22,19 @@ body{
   justify-content: center;
 }
 
+p {
+  margin: 10px;
+}
+
 .navbar {
   background-color: #000000;
   color: rgb(255, 255, 255);
-  opacity: 0.8;
+  opacity: 0.85;
 
   position: absolute;
   top: -100;
   display: flex;
+  flex-direction: row;
   align-items: top;
   width: 100%;
   height: 80px;
@@ -37,21 +47,58 @@ body{
 
 .logo {
   left: -50px;
+  width: 33%;
 }
 
 .p1 {
   display: flex;
   justify-content: center;
+
   animation: 0.9s ease-in-out slideInFromBottom, 1.3s ease-in-out fadeIn;
 }
 
 .p1b {
   display: flex;
   justify-content: center;
+
   animation: 0.9s ease-in-out slideInFromLeft, 1.3s ease-in-out fadeIn;
 }
 
+.p1b-lesson {
+  display: flex;
+  justify-content: center;
+
+  animation: 0.9s ease-in-out slideInFromLeft, 1.3s ease-in-out fadeIn;
+}
+
+
+.skill {
+  display: flex;
+  justify-content: center;
+}
+
+
 .square {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  letter-spacing: 2px;
+  box-shadow: 5px 5px 18px 5px #121212;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 675px;
+  border-radius: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+/*
+.squareb, .squarei, .squarea {
   background-color: #000000;
   color: rgb(255, 255, 255);
   opacity: 0.7;
@@ -62,18 +109,21 @@ body{
   display: flex;
   align-items: top;
   justify-content: center;
-  width: 800px;
+  width: 1100px;
   height: 650px;
   border-radius: 20px;
   margin-top: 150px;
   margin-bottom: 150px;
+  animation: 0.9s ease-in-out slideInFromLeft;
 }
+*/
 
-.squareb, .squarei, .squarea {
+.squareb-lesson, .squarei-lesson, .squarea-lesson {
   background-color: #000000;
   color: rgb(255, 255, 255);
   opacity: 0.7;
   letter-spacing: 4px;
+  box-shadow: 5px 5px 18px 5px #121212;
 
   position: absolute;
   display: flex;
@@ -87,10 +137,48 @@ body{
   animation: 0.9s ease-in-out slideInFromLeft;
 }
 
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  align-items: center;
+  display: block;
+  justify-content: center;
+  width: 450px;
+  height: 100px;
+  margin: 30px;
+  padding: 7px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  
+  letter-spacing: 4px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+button:hover {
+  /*background-color: grey;*/
+  color: white;
+}
+
 .p2 {
   display: flex;
   justify-content: center;
-  animation: 1.3s ease-in-out fadeIn;
+  /*animation: 1.3s ease-in-out fadeIn;*/
+}
+
+.qzlink {
+  padding: 10px; /* added padding*/
+  font-size: 16px; /*enlarged font*/
+  /*text-decoration: none;*/
+  color: white;
 }
 
 .infocol {
@@ -142,48 +230,206 @@ body{
   }
 }
 
+@keyframes fadeInS {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.7;
+  }
+}
+
 /*WORKSPACE*/
 
-.square {
-  flex-direction: column;
-  align-items: center;
+.titleb {
+  display: flex;
+  justify-content: center;
+  width: 500px;
 }
 
-.btns {
+.squareb, .squarei, .squarea {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  letter-spacing: 4px;
+  box-shadow: 5px 5px 18px 5px #121212;
+
+  position: absolute;
   display: flex;
   flex-direction: column;
-  margin: 0px;
-  justify-content: center;
   align-items: center;
+  /*justify-content: center;*/
+  width: 1000px;
+  height: 650px;
+  border-radius: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  animation: 0.9s ease-in-out slideInFromLeft;
 }
 
-button {
-  align-items: center;
-  display: block;
-  justify-content: center;
-  width: 450px;
-  height: 100px;
-  margin: 30px;
-  padding: 7px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  
-  letter-spacing: 4px;
-  font-family: Trebuchet MS;
-  font-size: 40px;
+.rowb1-lesson-title {
+  padding-left: 20px;
+  display: flex;
+  /*align-items: left;*/
+  justify-content: left;
+  flex-direction: row;
+  font-size: 24px;
+  text-decoration: underline;
+  width: 95%;
 }
+
+.rowb1-lesson {
+  /*
+  padding-left: 25px;
+  padding-right: 25px;
+  */
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: row;
+  width: 95%;
+}
+
+.lss {
+  margin: 15px;
+  padding: 0px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  height: 90px;
+  width: 180px;
+  border-radius: 8px;
+  font-size: 24px;
+  color: black;
+}
+
+/*********************/
 
 button:hover {
-  background-color: grey;
+  background: linear-gradient(90deg, #755bea,#ff72c0);
+  /*background: linear-gradient(90deg, #0162c8,#55e7fc);*/
+  /*transform: scale(0.99);*/
+}
+
+button:active {
+  transform: scale(0.97);
+  /* Scaling button to 0.98 to its original size*/
+  box-shadow: 3px 2px 22px 1px rgba(255, 255, 255, 0.3);
+  /* Lowering the shadow*/
+}
+
+.logo:hover {
+  transform: scale(0.96);
+}
+
+
+/*
+.logo:active {
+  transform: scale(0.99);
+}
+*/
+
+.qzlink:active {
+  transform: scale(0.9);
+}
+
+.qzlink:hover {
+  color:#21FAE1;
+}
+
+@keyframes slideOutL {
+  0%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInL {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/*
+.msg {
+  display: flex;
+  flex-direction: row-reverse;
+}*/
+
+
+.wlcm1{
+  display: flex;
+  width: 33%;
+  font-size: 28px;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: 2s ease-in-out forwards slideInFromTop, 3s forwards ease-in-out fadeIn;
+  animation-delay: 0.5s;
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/*
+.skill{
+
+  opacity: 0;
+  animation: 1s ease-in-out forwards slideInL;
+  animation-delay: 2s;
+
+}*/
+
+/*
+square {
+  overflow: hidden;
+  white-space: nowrap;
+}*/
+
+/*
+.qzlink {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.qzlink:hover {
+  box-shadow: inset 800px 0 0 0 #54b3d6;
   color: white;
 }
+*/
 
-p {
-  margin: 10px;
+/*
+.sidebar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+  background-attachment: scroll;
+  height: 600px;
+  width: 150px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 8px;
+  right: 10px;
+  top: 200px;
+
+  animation: 0.9s ease-in-out slideInFromBottom, 1.3s ease-in-out fadeInS;
 }
+*/
 
-/* DEBUGGER
+/* DEBUGGER 
 * { outline: 2px dotted red }
 * * { outline: 2px dotted green }
 * * * { outline: 2px dotted orange }
